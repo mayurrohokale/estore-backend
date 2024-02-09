@@ -79,6 +79,15 @@ users.post('/login', (req, res) => {
                   );
                   res.status(200).send({
                     token: token,
+                    expiresInSeconds: 3600,
+                    user: {
+                      firstName: result[0].firstName,
+                      lastName: result[0].lastName,
+                      address: result[0].address,
+                      city: result[0].city,
+                      state: result[0].city,
+                      pin: result[0].pin,
+                    },
                   });
                 } else {
                   res.status(401).send({
