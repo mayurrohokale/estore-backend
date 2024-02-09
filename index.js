@@ -7,6 +7,9 @@ const cors = require('cors');
 const PORT = 5001;
 const  bodyParser = require("body-parser");
 
+
+
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/productCategories', productCategories);
