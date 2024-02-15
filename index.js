@@ -6,7 +6,7 @@ const app = express();
 const cors = require('cors');
 const PORT = 5001;
 const  bodyParser = require("body-parser");
-
+const orders= require('./routes/orders');
 
 
 
@@ -15,6 +15,7 @@ app.use(bodyParser.json());
 app.use('/productCategories', productCategories);
 app.use('/products', products);
 app.use('/users', users);
+app.use('/orders', orders);
 
 
 const server = app.listen(PORT, ()=> {
